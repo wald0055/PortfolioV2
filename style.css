@@ -80,9 +80,13 @@ body {
 }
 
 .hero h1 {
+  font-family: 'Sigmar One', cursive; /* or 'Luckiest Guy' */
   font-size: clamp(2.5rem, 6vw, 4rem);
   margin-bottom: 1rem;
+  color: red; /* optional: make it pop against your video background */
+  text-shadow: 0 0 30px black; /* optional subtle glow */
 }
+
 
 .hero p {
   color: var(--muted);
@@ -92,7 +96,7 @@ body {
 .btn {
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
-  background: var(--accent);
+  background: red;
   color: #000;
   font-weight: 600;
   text-decoration: none;
@@ -101,7 +105,9 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(108, 242, 194, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.6);
+  color: white;
+  background: #0f1115;
 }
 
 
@@ -238,7 +244,7 @@ body {
 /* HOVER (only ONE transform source) */
 .card-link:hover .card {
   transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(108, 242, 194, 0.25);
+  box-shadow: 0 25px 60px rgba(255, 0, 0, 0.6);
 }
 
 /* ---------------- FOOTER ---------------- */
