@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evan Waldroff | Creative Portfolio</title>
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- HERO -->
+  <header class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="/PortfolioV2/images/sky-clouds.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Evan Waldroff</h1>
+    <p>Web Developer • Videographer • Photographer • Graphic Designer</p>
+    <a href="#web" class="btn">View My Work</a>
+  </div>
+</header>
+
+
+<!-- WEB DEVELOPMENT -->
+<section id="web" class="section">
+  <h2>Web Development</h2>
+
+  <div class="grid">
+    <a href="https://wald0055.github.io/mtm6302-capstone-wald0055/" target="_blank" class="card-link">
+      <div class="card reveal">
+        <img src="/PortfolioV2/images/Web-capstone-TN.png" alt="Project preview">
+        <h3>NASA APOD</h3>
+        <p>This website is a personal project built to showcase NASA's Astronomy Picture of the Day (APOD) using the official NASA API. 
+      </div>
+    </a>
+
+    <a href="https://wald0055.github.io/mtm6201-midterm/" target="_blank" class="card-link">
+      <div class="card reveal">
+        <img src="/PortfolioV2/images/Web-Midterm-TN.png" alt="Project preview">
+        <h3>MTM Midterm</h3>
+        <p>Responsive website built with HTML & CSS.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+  <!-- VIDEOGRAPHY -->
+  <section class="section">
+  <h2>Videography</h2>
+  <p class="section-desc">Video edits, short films, and creative projects.</p>
+
+  <div class="grid">
+    <a href="#" class="card-link">
+      <div class="card reveal">
+        <img src="https://via.placeholder.com/600x400" alt="Video project">
+        <h3>Short Film</h3>
+        <p>Cinematic edit focusing on mood and pacing.</p>
+      </div>
+    </a>
+
+    <a href="https://youtu.be/ghG8OU08eHo?si=-adapBDLh2mirezT" class="card-link">
+      <div class="card reveal">
+        <img src="/PortfolioV2/images/Video-onelastmoment-TN.png" alt="Video project">
+        <h3>One Last Moment: A Short Film</h3>
+        <p>School Project Short Film</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+ <!-- PHOTOGRAPHY SECTION -->
+<section class="section full-width">
+  <h2>Photography</h2>
+  <p class="section-desc">Selected photography work.</p>
+
+  <div id="photoCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#photoCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#photoCarousel" data-slide-to="1"></li>
+      <li data-target="#photoCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100 carousel-img" src="/PortfolioV2/images/Photography1.jpg" data-full="images/photo1-full.jpg" alt="Photo 1">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 carousel-img" src="/PortfolioV2/images/Photography2.jpg" data-full="images/photo2-full.jpg" alt="Photo 2">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 carousel-img" src="images/photo3-thumb.jpg" data-full="images/photo3-full.jpg" alt="Photo 3">
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#photoCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#photoCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="Full-size photo">
+</div>
+
+
+
+    
+  <!-- GRAPHIC DESIGN -->
+  <section class="section">
+  <h2>Graphic Design</h2>
+  <p class="section-desc">Branding, posters, and visual design.</p>
+
+  <div class="grid">
+    <a href="#" class="card-link">
+      <div class="card reveal">
+        <img src="https://via.placeholder.com/600x400" alt="Design project">
+        <h3>Brand Identity</h3>
+        <p>Logo and visual system design.</p>
+      </div>
+    </a>
+
+    <a href="#" class="card-link">
+      <div class="card reveal">
+        <img src="https://via.placeholder.com/600x400" alt="Design project">
+        <h3>Poster Series</h3>
+        <p>Typography and layout exploration.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Evan Waldroff. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
