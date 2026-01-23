@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="stars"></div>
+
+  <!-- CONTACT HERO -->
+  <header class="hero small-hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Let’s Bring Your Vision to Life</h1>
+      <p>Whether it’s web development, video production, photography, or design, I’m ready to collaborate and turn your ideas into reality. Reach out and let’s create something unforgettable together.</p>
+
+    <!-- Scroll down arrow -->
+    <a href="#contact-section" class="scroll-arrow">
+    <div class="arrow-v"></div>
+    </a>
+
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact-section" class="section contact-section">
+    <div class="contact-container">
+
+      <form class="contact-form reveal" action="https://formspree.io/f/mvzkzadb" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
+
+<!-- Back to Home Button -->
+<div class="back-home">
+  <a href="index.html" class="btn">← Back to Home</a>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Evan Waldroff. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

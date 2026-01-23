@@ -1,16 +1,21 @@
 const reveals = document.querySelectorAll('.reveal');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('active');
-    }
-  });
-}, {
-  threshold: 0.2
-});
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      } else {
+        entry.target.classList.remove('active');
+      }
+    });
+  },
+  {
+    threshold: 0.3
+  }
+);
 
-reveals.forEach(reveal => observer.observe(reveal));
+reveals.forEach(el => observer.observe(el));
 
 
 /* LIGHTBOX */
@@ -37,3 +42,30 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// script.js
+
+// Wait until DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.querySelector('.contact-form');
+
+  // Function to check if element is in viewport
+  function isInViewport(el, offset = 100) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight - offset;
+  }
+
+  // Function to trigger animation
+  function animateFormOnScroll() {
+    if (isInViewport(contactForm)) {
+      contactForm.classList.add('animate');
+      // Remove scroll listener after animation plays once
+      window.removeEventListener('scroll', animateFormOnScroll);
+    }
+  }
+
+  // Listen for scroll
+  window.addEventListener('scroll', animateFormOnScroll);
+
+  // Trigger on page load in case form is already visible
+  animateFormOnScroll();
+});
