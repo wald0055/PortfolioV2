@@ -69,3 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // Trigger on page load in case form is already visible
   animateFormOnScroll();
 });
+
+
+/* =========================
+   PHOTOGRAPHY MODE TOGGLE
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const photoBtn = document.getElementById("photoModeBtn");
+  if (!photoBtn) return;
+
+  // Toggle photography mode
+  photoBtn.addEventListener("click", () => {
+    const active = document.body.classList.toggle("photo-mode");
+    photoBtn.textContent = active ? "Close" : "See Photography";
+  });
+
+  // ESC key exits photography mode
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.body.classList.contains("photo-mode")) {
+      document.body.classList.remove("photo-mode");
+      photoBtn.textContent = "See Photography";
+    }
+  });
+});
